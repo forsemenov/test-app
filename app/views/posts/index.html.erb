@@ -1,0 +1,23 @@
+<center><h2>POSTS</h2></center>
+
+<div class="row">
+
+    <div class="col-sm-8 col-sm-offset-2">
+
+        <% @posts.each do |post| %>
+
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <%= link_to post_path(post), class: 'post-link' do %>
+                    <%= post.title %>
+                <% end %>
+              </div>
+              <div class="panel-body">
+                <%= post.body %>
+              </div>
+            </div>
+
+        <% end %>
+
+    </div>
+</div>
