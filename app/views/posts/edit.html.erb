@@ -1,0 +1,17 @@
+<center><h2>EDIT POST</h2></center>
+
+<div class='row'>
+    <div class='col-sm-6 col-sm-offset-3'>
+        <%= form_for @post do |f| %>
+            <div class="form-group">
+                <%= f.label :title %>
+                <%= f.text_field :title, class: "form-control" %>
+            </div>
+            <div class="form-group">
+                <%= f.label :body %>
+                <%= f.text_area :body, class: "form-control" %>
+            </div>
+            <%= f.submit "Submit", class: "btn btn-primary" %>
+        <% end %>
+    </div>
+</div>
