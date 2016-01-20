@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  host: localhost
+  database: test_app_development
+  user: pguser
+  password: 111111
+
+test:
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  host: localhost
+  database: test_app_test
+  user: pguser
+  password: 111111
