@@ -12,5 +12,20 @@
           </div>
         </div>
 
+        <center><h3>POST COMMENTS</h3></center>
+
+        <div class='comments-container'>
+            <% @comments.each do |comment| %>
+                <%= render partial: 'comment', locals: { comment: comment } %>
+                <div class='posts-actions'>
+                    <%= link_to 'Destroy', post_path(post), method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+                    <%= link_to 'Edit', edit_post_path(post), class: "btn btn-success" %>
+                </div>
+            <% end %>
+        </div>
+
+        <center><h3>NEW COMMENT</h3></center>
+        <%= render partial: 'comments/form', locals: { comment: @comment } %>
+
     </div>
 </div>

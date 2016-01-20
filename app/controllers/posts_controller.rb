@@ -6,12 +6,13 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comments = Comment.where(post_id: @post.id)
+    @comment = Comment.new
   end
 
   def create
     @post = Post.new(post_params)
     @post.save
-    render :create
   end
 
   def edit
