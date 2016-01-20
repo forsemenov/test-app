@@ -5,9 +5,8 @@
     <div class="col-sm-8 col-sm-offset-2">
         <div class='posts-container'>
             <% @posts.each do |post| %>
-
                 <%= render partial: 'post', locals: {  post: post } %>
-
+                <%= link_to 'Destroy', post_path(post), method: :delete, class: "btn btn-danger destroy-post", data: { confirm: 'Are you sure?' } %>
             <% end %>
         </div>
 
